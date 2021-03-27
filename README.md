@@ -8,13 +8,13 @@ Based on my mAP performance now, it implys that the training images are not enou
 
 <div style="text-align:center"><img src="./Images/image1.jpg" width="500">
 
-B)I ran experiemnts on Yolov5 and Faster Rcnn with the tote images in test dataset. For Yolov5 the mAP was always at 0 with different epochs and model widths; on the other hand, Faster Rcnn model did converge and return some results when I set epochs = 1500. As mentioned above, individual objects are selected as training sets with top/side views and top/side/ambient light sources. Ideally it should be providing good performance since this is a non-occluded testing set with the same top/side views and top/side/ambient light sources but with all in the tote.
+B) I ran experiemnts on Yolov5 and Faster Rcnn with the tote images in test dataset. For Yolov5 the mAP was always at 0 with different epochs and model widths; on the other hand, Faster Rcnn model did converge and return some results when I set epochs = 1500. As mentioned above, individual objects are selected as training sets with top/side views and top/side/ambient light sources. Ideally it should be providing good performance since this is a non-occluded testing set with the same top/side views and top/side/ambient light sources but with all in the tote.
 
-<div style="text-align:center"><img src="./Images/image2.jpg" width="500">
+<div style="text-align:center"><img src="./Images/image3.jpg" width="300">
 
 C) Here I used mAP since it provide both false potivie and true positive feedback (also mAP is based on top of IoU). Here my best performance I get 0.227 at mAP_50. My best observation for this low performance is that I noticed that the augmentation didn't take bounding boxes into consideration, so the IoU effects the results.
+<div style="text-align:center"><img src="./Images/image2.jpg" width="1000">
 
-<div style="text-align:center"><img src="./Images/image3.jpg" width="500">
 <div style="text-align:center"><img src="./Images/image4.jpg" width="500">
 
 d) A short commentary related to the observed accuracy. Your solutions probably won't be perfect, and that's perfectly fine. An important thing is if you understand why it is not perfect and what should be corrected in the second half of the semester, especially in a more complex setup when objects with obstruct each other. 
