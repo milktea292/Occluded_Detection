@@ -10,8 +10,6 @@ Based on my mAP performance now, it implys that the training images are not enou
 
 B) I ran experiemnts on Yolov5 and Faster Rcnn with the tote images in test dataset. For Yolov5 the mAP was always at 0 with different epochs and model widths; on the other hand, Faster Rcnn model did converge and return some results when I set epochs = 1500. As mentioned above, individual objects are selected as training sets with top/side views and top/side/ambient light sources. Ideally it should be providing good performance since this is a non-occluded testing set with the same top/side views and top/side/ambient light sources but with all in the tote.
 
-<div style="text-align:center"><img src="./Images/image3.jpg" width="300">
-
 C&D) Here I used mAP since it provide both false potivie and true positive feedback (also mAP is based on top of IoU). Here my best performance I get 0.227 at mAP_50. My best observation for this low performance is that I noticed that the augmentation didn't take bounding boxes into consideration, so the IoU effects the results. Some solutions I have come up with:
 1.fixed the bounding box so it follows the flow of data augmentation. 
 2.fine-tuning more hyperparameters such as learning rate to see if I can improve the mAP performance.
@@ -25,7 +23,13 @@ C&D) Here I used mAP since it provide both false potivie and true positive feedb
 
 Your program(s) should pick one picture of the tote from the validation set (please attach this sample to your codes) and present the processing result. We should be able to run your programs without any edits -- please double check before submission that the codes are complete and run correctly. Please provide detailed instructions in your report how to run the codes: which version of Python you use, which packages we need to install (attaching the dependency file is a nice thing to do), etc.
 
+Val_visualization:
+<div style="text-align:center"><img src="./Images/image3.jpg" width="300">
+ 
+It is modified from our CV2-MaskRCnn Colab hw. I change the model to FasterRCnn and trained it with my dataset. 
+Please click https://colab.research.google.com/drive/1HQvaEIfyLB3pqp5bcz3M43IQxLbmmMRl?usp=sharing or check your ND email to access the file.
+
 3. Only for students working in groups:
 
-Indicate in the report which part was done by which teammate, as in Computer Vision I class.
+So far Me and Nick are working on our own version of model, and based on our works we will make a fusion version to improve the performance.
 
