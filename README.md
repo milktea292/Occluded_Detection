@@ -27,7 +27,9 @@ C&D) Here I used mAP since it provide both false potivie and true positive feedb
 Val_visualization:
 <div style="text-align:center"><img src="./Images/image3.jpg" width="300">
  
-It is modified from our CV2-MaskRCnn Colab hw. I change the model to FasterRCnn and trained it with my dataset. The only two steps is to upload the zip file to the google calab and restart the runtime after the executing the second cell for the first time.
+It is modified from our CV2-MaskRCnn Colab hw. I change the model to FasterRCnn and trained it with my dataset. 
+!Action required!
+The only two steps is to upload the zip file in this github ./dataset/zipfile to the google calab and restart the runtime after the executing the second cell for the first time.
 Please click https://colab.research.google.com/drive/1HQvaEIfyLB3pqp5bcz3M43IQxLbmmMRl?usp=sharing or check your ND email to access the file.
 
 3. Only for students working in groups:
