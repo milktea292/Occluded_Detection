@@ -17,7 +17,7 @@ C&D) Here I used mAP since it provide both false potivie and true positive feedb
 <div style="text-align:center"><img src="./Images/image2.jpg" width="1000">
 
 <div style="text-align:center"><img src="./Images/image4.jpg" width="500">
-
+<div style="text-align:center"><img src="./Images/image6.jpg" width="500">
 
 2. Current version of your programs with instructions how to run them.
 
