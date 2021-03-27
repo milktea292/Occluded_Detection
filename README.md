@@ -21,12 +21,12 @@ C&D) Here I used mAP since it provide both false potivie and true positive feedb
 
 2. Current version of your programs with instructions how to run them.
 
-Your program(s) should pick one picture of the tote from the validation set (please attach this sample to your codes) and present the processing result. We should be able to run your programs without any edits -- please double check before submission that the codes are complete and run correctly. Please provide detailed instructions in your report how to run the codes: which version of Python you use, which packages we need to install (attaching the dependency file is a nice thing to do), etc.
+
 
 Val_visualization:
 <div style="text-align:center"><img src="./Images/image3.jpg" width="300">
  
-It is modified from our CV2-MaskRCnn Colab hw. I change the model to FasterRCnn and trained it with my dataset. 
+It is modified from our CV2-MaskRCnn Colab hw. I change the model to FasterRCnn and trained it with my dataset. The only two steps is to upload the zip file to the google calab and restart the runtime after the executing the second cell for the first time.
 Please click https://colab.research.google.com/drive/1HQvaEIfyLB3pqp5bcz3M43IQxLbmmMRl?usp=sharing or check your ND email to access the file.
 
 3. Only for students working in groups:
