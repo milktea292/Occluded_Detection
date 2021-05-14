@@ -1,7 +1,41 @@
-# semester_project
+# Semester_project
+## Final Report
+1.How much occlusion can be present on a single object yet still result in a positive high confidence match?
+2.Is the approach scalable to large databases? If so, how can we test this?
+3.Could the approach extend to classes of objects or even novel objects?
 
 
-In my work, I have applied Faster RCNN architecture to my dataset.
+a) A description of the solution with justification of the applied methods and models. Try to make these justifications through the lens of the questions listed above.
+
+In this occluded-object-detection project I tried to mimic the overlapping issue by applying data augmentation then forward as input to Faster RCNN model for detection. The performance is evaluated by using Average Precision with each class and mean Average Precision for overall performance.
+
+For experiment, I used raw individual object for training, and the performance was poor as expected.
+
+<div style="text-align:center"><img src="./Images/raw_indi_input.jpg" width="500">
+<div style="text-align:center"><img src="./Images/raw_indi_performance.jpg" width="500">
+
+Hence I tried to apply a randomly partial coarse-dropout method to simulate the overlapping scenarios. The performance was worse than the raw input. The main issue with this method was that the dropout areas were filled with black color, and these areas were considered as noise.
+
+<div style="text-align:center"><img src="./Images/randdropout_indi_input.jpg" width="500">
+<div style="text-align:center"><img src="./Images/randdropout_indi_performance.jpg" width="500">
+
+Hence instead of filling black color with the areas, I tried the randomly partial pooling(blurring) to mitigate this issue. The performance was better than randomly coarse-dropout but still worse than raw input.
+
+<div style="text-align:center"><img src="./Images/randblur_indi_input.jpg" width="500">
+<div style="text-align:center"><img src="./Images/randblur_indi_performance.jpg" width="500">
+
+b) A description of experiments you have conducted and what you hoped to answer by doing these calculations. For instance, if you wanted to test if your solution generalizes across sensors, how you split your data? Or, if you wanted to test different lighting conditions, what samples were selected for training and validation sets? Look at the questions above and think if your experiments allow to answer all of them (or most of them). 
+
+c) A detection accuracy achieved on your validation subset (not used in training). You are free to choose an accuracy metric. It can be as simple as IoU, or as complex as mAP. Justify why you decided to use this (and not the other) accuracy metric. 
+
+d) Discuss improvements that could be done if you had more time.
+
+
+
+
+
+## Midterm report
+In my work, I applied Faster RCNN architecture to my dataset.
 
 From my understanding, we should have at least 10+ images with different angles of the individual objects. So in my case for 10 classes it should be at least 100 pictures. Data augmentation is a method to provide robustness such as shear, rotation, and exposure. Basically the more quantities and diversity of each object in the training set, the better performance it will have. In my case, I have originial 204 pictures in total for individual objects, and with shear/exposure, I have 494 train images. As for my validation and test dataset, I utilized tote images and splited them in to 1:1 (82:81). The overall actual spliting-frame rate is 494:82:81.
 Based on my mAP performance now, it implys that the training images are not enough.
