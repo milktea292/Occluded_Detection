@@ -14,15 +14,23 @@ For experiment, I used raw individual object for training, and the performance w
 <div style="text-align:center"><img src="./Images/raw_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/raw_indi_performance.jpg" width="1000">
 
+### randomly partial coarse-dropout
 Hence I tried to apply a randomly partial coarse-dropout method to simulate the overlapping scenarios. The performance was worse than the raw input. The main issue with this method was that the dropout areas were filled with black color, and these areas were considered as noise.
 
 <div style="text-align:center"><img src="./Images/randdropout_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/randdropout_indi_performance.jpg" width="1000">
 
+### randomly partial pooling
 Hence instead of filling black color with the areas, I tried the randomly partial pooling(blurring) to mitigate this issue. The performance was better than randomly coarse-dropout but still worse than raw input.
 
 <div style="text-align:center"><img src="./Images/randblur_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/randblur_indi_performance.jpg" width="1000">
+
+### randomly jigsaw
+Instead of introducing noise to the model from augmentation, I thought about altering the objects shape to let the model learn from its texture instead of shape, hence I applied jigsaw method and was expecting some improvement. However, I was too naive.
+
+<div style="text-align:center"><img src="./Images/randjigsaw_indi_input.jpg" width="1000">
+<div style="text-align:center"><img src="./Images/randjigsaw_indi_performance.jpg" width="1000">
 
 A sample of occlusion
 <div style="text-align:center"><img src="./Images/raw_sample.jpg" width="1000">
