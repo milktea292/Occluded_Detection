@@ -21,8 +21,8 @@ Hence I tried to apply a randomly partial coarse-dropout method to simulate the 
 
 Hence instead of filling black color with the areas, I tried the randomly partial pooling(blurring) to mitigate this issue. The performance was better than randomly coarse-dropout but still worse than raw input.
 
-<div style="text-align:center"><img src="./Images/randblur_indi_input.jpg" width="500">
-<div style="text-align:center"><img src="./Images/randblur_indi_performance.jpg" width="500">
+<div style="text-align:center"><img src="./Images/randblur_indi_input.jpg" width="1000">
+<div style="text-align:center"><img src="./Images/randblur_indi_performance.jpg" width="1000">
 
 b) A description of experiments you have conducted and what you hoped to answer by doing these calculations. For instance, if you wanted to test if your solution generalizes across sensors, how you split your data? Or, if you wanted to test different lighting conditions, what samples were selected for training and validation sets? Look at the questions above and think if your experiments allow to answer all of them (or most of them). 
 
