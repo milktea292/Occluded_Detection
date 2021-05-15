@@ -51,8 +51,8 @@ C&D) Here I used mAP since it provide both false potivie and true positive feedb
 3.work on more data-augmentation to increase my trainning dataset, especially start to crop out a small to midium portion of the individual objects as if it was occluded.
 <div style="text-align:center"><img src="./Images/image2.jpg" width="1000">
 
-<div style="text-align:center"><img src="./Images/image4.jpg" width="500">
-<div style="text-align:center"><img src="./Images/image6.jpg" width="500">
+<div style="text-align:center"><img src="./Images/image4.jpg" width="1000">
+<div style="text-align:center"><img src="./Images/image6.jpg" width="1000">
 
 2. Current version of your programs with instructions how to run them.
 
