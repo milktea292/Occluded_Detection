@@ -45,9 +45,14 @@ c) A detection accuracy achieved on your validation subset (not used in training
 
 d) Discuss improvements that could be done if you had more time.
 
+2. Current version of your programs with instructions how to run them (as in the mid-term delivery).
+2a) For data augmentation: download /dataset/Occluded_final.zip file
+2b) Run the /src/dataaug.ipynb file to get a Occluded_final.zip file(with train_copy folder containing data augmentation in it)
+2c) Open Collab and manually upload the zip file we got from 2b: https://colab.research.google.com/drive/1HQvaEIfyLB3pqp5bcz3M43IQxLbmmMRl?usp=sharing
+2d) click Run ALL and wait for the result (it takes about 20 minutes to train on average, depending on which segmentation and how many images you generated)
 
-
-
+3. Your consent to forward your (a) report and/or (b) sources code along with (c) my short commentary to Amazon Robotics (Tye Brady's team). 
+4. Only for students working in groups: Indicate in the report which part was done by which teammate, as in Computer Vision I class.
 
 ## Midterm report
 In my work, I applied Faster RCNN architecture to my dataset.
