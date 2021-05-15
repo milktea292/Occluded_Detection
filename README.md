@@ -45,7 +45,7 @@ c) A detection accuracy achieved on your validation subset (not used in training
 
 d) Discuss improvements that could be done if you had more time.
 
-2. Current version of your programs with instructions how to run them (as in the mid-term delivery).
+2. Current version of your programs with instructions how to run them (as in the mid-term delivery). 
 2a) For data augmentation: download /dataset/Occluded_final.zip file
 2b) Run the /src/dataaug.ipynb file to get a Occluded_final.zip file(with train_copy folder containing data augmentation in it)
 2c) Open Collab and manually upload the zip file we got from 2b: https://colab.research.google.com/drive/1HQvaEIfyLB3pqp5bcz3M43IQxLbmmMRl?usp=sharing
