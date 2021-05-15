@@ -7,7 +7,7 @@
 
 a) A description of the solution with justification of the applied methods and models. Try to make these justifications through the lens of the questions listed above.
 
-In this occluded-object-detection project I tried to mimic the overlapping issue by applying data augmentation then forward as input to Faster RCNN model for detection. The performance is evaluated by using Average Precision with each class and mean Average Precision for overall performance.
+In this occluded-object-detection project I tried to mimic the overlapping issue by applying data augmentation then forward as input to Faster RCNN model for detecting. The performance is evaluated by using Average Precision with each class and mean Average Precision for overall performance.
 
 For experiment, I used raw individual object for training, and the performance was poor as expected.
 
@@ -15,19 +15,19 @@ For experiment, I used raw individual object for training, and the performance w
 <div style="text-align:center"><img src="./Images/raw_indi_performance.jpg" width="1000">
 
 ### randomly partial coarse-dropout
-Hence I tried to apply a randomly partial coarse-dropout method to simulate the overlapping scenarios. The performance was worse than the raw input. The main issue with this method was that the dropout areas were filled with black color, and these areas were considered as noise.
+Hence I tried to apply a randomly partial coarse-dropout method to simulate the overlapping scenarios. The performance was worse than output from the raw input. The main issue with this method was that the dropout areas were filled with color Black, and these areas were considered as noise by the Faster RCNN model.
 
 <div style="text-align:center"><img src="./Images/randdropout_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/randdropout_indi_performance.jpg" width="1000">
 
 ### randomly partial pooling
-Hence instead of filling black color with the areas, I tried the randomly partial pooling(blurring) to mitigate this issue. The performance was better than randomly coarse-dropout but still worse than raw input.
+Hence instead of filling black with the areas, I tried the randomly partial pooling(blurring) method to mitigate this issue. The performance was better than randomly coarse-dropout but still worse than raw input.
 
 <div style="text-align:center"><img src="./Images/randblur_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/randblur_indi_performance.jpg" width="1000">
 
 ### randomly jigsaw
-Instead of introducing noise to the model from augmentation, I thought about altering the objects shape to let the model learn from its texture instead of shape, hence I applied jigsaw method and was expecting some improvement. However, I was too naive.
+Instead of introducing noise to the model from augmentation, I thought about altering the objects shape to let the model learn from its texture instead of its shape, hence I applied jigsaw method and was expecting some improvements. However, I was too naive.
 
 <div style="text-align:center"><img src="./Images/randjigsaw_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/randjigsaw_indi_performance.jpg" width="1000">
@@ -43,13 +43,13 @@ b) A description of experiments you have conducted and what you hoped to answer 
 
 c) A detection accuracy achieved on your validation subset (not used in training). You are free to choose an accuracy metric. It can be as simple as IoU, or as complex as mAP. Justify why you decided to use this (and not the other) accuracy metric. 
 
-d) Discuss improvements that could be done if you had more time.
+d) Discuss improvements that could be done if you had more time.  
 
-2. Current version of your programs with instructions how to run them (as in the mid-term delivery). 
-2a) For data augmentation: download /dataset/Occluded_final.zip file
-2b) Run the /src/dataaug.ipynb file to get a Occluded_final.zip file(with train_copy folder containing data augmentation in it)
-2c) Open Collab and manually upload the zip file we got from 2b: https://colab.research.google.com/drive/1HQvaEIfyLB3pqp5bcz3M43IQxLbmmMRl?usp=sharing
-2d) click Run ALL and wait for the result (it takes about 20 minutes to train on average, depending on which segmentation and how many images you generated)
+2. Current version of your programs with instructions how to run them (as in the mid-term delivery).  
+2a) For data augmentation: download /dataset/Occluded_final.zip file  
+2b) Run the /src/dataaug.ipynb file to get a Occluded_final.zip file(with train_copy folder containing data augmentation in it)  
+2c) Open Collab and manually upload the zip file we got from 2b: https://colab.research.google.com/drive/1HQvaEIfyLB3pqp5bcz3M43IQxLbmmMRl?usp=sharing  
+2d) click Run ALL and wait for the result (it takes about 20 minutes to train on average, depending on which segmentation and how many images you generated)  
 
 3. Your consent to forward your (a) report and/or (b) sources code along with (c) my short commentary to Amazon Robotics (Tye Brady's team). 
 4. Only for students working in groups: Indicate in the report which part was done by which teammate, as in Computer Vision I class.
