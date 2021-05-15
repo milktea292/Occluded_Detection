@@ -24,6 +24,10 @@ Hence instead of filling black color with the areas, I tried the randomly partia
 <div style="text-align:center"><img src="./Images/randblur_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/randblur_indi_performance.jpg" width="1000">
 
+A sample of occlusion
+<div style="text-align:center"><img src="./Images/raw_sample.jpg" width="1000">
+
+
 b) A description of experiments you have conducted and what you hoped to answer by doing these calculations. For instance, if you wanted to test if your solution generalizes across sensors, how you split your data? Or, if you wanted to test different lighting conditions, what samples were selected for training and validation sets? Look at the questions above and think if your experiments allow to answer all of them (or most of them). 
 
 c) A detection accuracy achieved on your validation subset (not used in training). You are free to choose an accuracy metric. It can be as simple as IoU, or as complex as mAP. Justify why you decided to use this (and not the other) accuracy metric. 
