@@ -10,19 +10,19 @@ For experiment, I used raw individual object for training, and the performance w
 <div style="text-align:center"><img src="./Images/raw_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/raw_indi_performance.jpg" width="1000">
 
-### randomly partial coarse-dropout
+### Randomly Partial Coarse-Dropout
 Hence I tried to apply a randomly partial coarse-dropout method to simulate the overlapping scenarios. The performance was worse than output from the raw input. The main issue with this method was that the dropout areas were filled with color Black, and these areas were considered as noise by the Faster RCNN model.
 
 <div style="text-align:center"><img src="./Images/randdropout_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/randdropout_indi_performance.jpg" width="1000">
 
-### randomly partial pooling
+### Randomly Partial Pooling
 Hence instead of filling black with the areas, I tried the randomly partial pooling(blurring) method to mitigate this issue. The performance was better than randomly coarse-dropout but still worse than raw input.
 
 <div style="text-align:center"><img src="./Images/randblur_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/randblur_indi_performance.jpg" width="1000">
 
-### randomly jigsaw
+### Randomly Jigsaw
 Instead of introducing noise to the model from augmentation, I thought about altering the objects shape to let the model learn from its texture instead of its shape, hence I applied jigsaw method and was expecting some improvements. However, I was too naive.
 
 <div style="text-align:center"><img src="./Images/randjigsaw_indi_input.jpg" width="1000">
@@ -43,7 +43,7 @@ The data augmentation for simulation was not an improvement in my case(more like
 
 c) It was shown in Qa, and the mAP was straightforward and more reasonable over IoU since there were multi-class in this project. If there was only one class in a image, IoU can be better a simple solution.
 
-d) I tried to mimic the occlusion scenarios and so far the augmentation seems to be considered as noise to the model. Here are some of my ideas with its improvement:
+d) I tried to mimic the occlusion scenarios and so far the augmentation seems to be considered as noise by the model. Here are some of my ideas with its improvement:
 d-1 - The universal way: More training images. My individual images are relatively low, and increasing more images will defintely help.
 d-2 - Random zoom: To human, we only need a part of the object to make a prediction in occluded situation, hence the idea of random zoom for training might work. 
 d-3 - Split some tote images into training set: This will definitely improve the performance, however, I tried to avoid this due to the leakage information from val/test to train set.  
