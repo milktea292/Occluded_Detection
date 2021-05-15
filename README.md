@@ -32,6 +32,9 @@ Instead of introducing noise to the model from augmentation, I thought about alt
 <div style="text-align:center"><img src="./Images/randjigsaw_indi_input.jpg" width="1000">
 <div style="text-align:center"><img src="./Images/randjigsaw_indi_performance.jpg" width="1000">
 
+### Comparison
+<div style="text-align:center"><img src="./Images/Performance.jpg" width="1000">
+
 A sample of occlusion
 <div style="text-align:center"><img src="./Images/raw_sample.jpg" width="1000">
 
