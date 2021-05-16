@@ -3,6 +3,9 @@
 
 The occlusion situation will require data augmentation from augmenting the individual objects to altering the background of the objects. Each object will need, let's say, 10 different angles of the object, and with augmentation for these images, each object will eventually has 20+ in total. When taking the images of individual objects, I use top-light and side-light views to try to increase the diversity of my training set. However, I didn't think of scaling(taking closer images of the object), and this will definitely help in the end. For the occlusion situation, training is necessary so that the model can detect the overlapped objects. In my work I would say if the object can still be detected at most 50% of occlusion, but since this method is not stable (considering the performance dropped when applying augmentation), for now I don't think it is scalable to large database nor can be chanllenged by novel objects(the bag of candies is constantly predicted as garlic sauce).
 
+### Sample of occluded-object detection
+<div style="text-align:center"><img src="./Images/samples_occluded_detections.jpg" width="1000">
+
 a) In this occluded-object-detection project I tried to mimic the overlapping issue by applying data augmentation then forward as input to Faster RCNN model for detecting. The performance is evaluated by using Average Precision with each class and mean Average Precision for overall performance.
 
 For experiment, I used raw individual object for training, and the performance was poor as expected.
