@@ -61,7 +61,7 @@ d-3 - Split some tote images into training set: This will definitely improve the
 
 Yes, I would love to!
 
-4.Only for students working in groups: Indicate in the report which part was done by which teammate, as in Computer Vision I class.
+4.Only for students working in groups: Indicate in the report which part was done by which teammate, as in Computer Vision I class.  
 Me and Nick decided to make this as an individual project due to time limitation.
 
 ## Midterm report
